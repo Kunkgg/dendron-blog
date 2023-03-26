@@ -2,7 +2,7 @@
 id: m1lynul9moi6nnbdr50ay81
 title: How to Integrate Django and Vue CLI
 desc: ''
-updated: 1656231171713
+updated: 1679750210240
 created: 1656231044515
 ---
 
