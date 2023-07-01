@@ -2,13 +2,13 @@
 id: uq2dwmdkr53dl9e838kboy8
 title: ER
 desc: ''
-updated: 1679794333458
+updated: 1681051161348
 created: 1679755068684
 ---
 
 ```mermaid
 erDiagram
-    version {
+    search_version {
       int id PK
       string name
     }
@@ -46,6 +46,7 @@ erDiagram
       int passed_count
       int failed_count
       int missed_count
+      bool is_active
     }
 
     itf_interface {
@@ -79,7 +80,7 @@ erDiagram
       int itf_interface_detail_id FK
       string name
       text content
-      string from_or_to
+      string desc
     }
 
     syntax_element_diff {
@@ -95,7 +96,7 @@ erDiagram
       bool is_same
     }
 
-    scan_target ||--o{ version : is_version
+    scan_target ||--o{ search_version : is_version
     scan_target ||--o{ component : is_component
     scan_target ||--o{ source_type : is_source_type
     scan_target ||--o{ repo : has_repo
